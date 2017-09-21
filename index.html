@@ -2,48 +2,111 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Investor-Agency</title>
+    <title>Investor-agency</title>
     <meta name="description" content="">
     <meta name="author" content="Andrei Bagmet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="images/favicon.png">
     <link rel="stylesheet" href="libs/normalize.min.css">
     <link rel="stylesheet" href="libs/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/mmenu/jquery.mmenu.all.css">
+    <link rel="stylesheet" href="libs/hamburgers.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media.css">
-    <script src="libs/prefixfree.min.js"></script>
+    <!-- <script src="libs/prefixfree.min.js"></script> -->
 </head>
 <body>
-    <!--[if lte IE 8]>
-        <style>
-            .ie-warning {
-                font: 16px Verdana, Arial, sans-serif;
-                color: #f8f8f8;
-                background: #626262;
-                width: 370px
-                padding: 0 20px;
-                position: fixed;
-                right: 0;
-                z-index: 10;
-            }
-            .ie-warning a {
-                color: #ffa5a5;
-                font-weight: bold;
-                text-decoration: underline;
-            }
-        </style>
-        <div class="ie-warning">
-            <p>К сожалению, Ваш браузер устарел, и не может нормально отображать сайт. Пожалуйста, <a href="https://browsehappy.com">скачайте</a> любой из современных браузеров. Ведь старые браузеры не только плохо читают данный сайт, но и другие (такие как вконтакте, одноклассники, ютуб).</p>
-        </div>
-    <![endif]--> <!-- warning for Internet Explorer -->
+
+<!--[if lte IE 8]>
+    <style>
+        .ie-warning {
+            font: 16px Verdana, Arial, sans-serif;
+            color: #f8f8f8;
+            background: #626262;
+            width: 370px;
+            padding: 10px 20px;
+            position: fixed;
+            right: 0;
+            z-index: 10;
+        }
+        .ie-warning a {
+            color: #ffa5a5;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+    <div class="ie-warning">
+        <p>К сожалению, Ваш браузер устарел, и не может нормально отображать сайт. Пожалуйста, <a href="https://browsehappy.com">скачайте</a> любой из современных браузеров. Ведь старые браузеры не только плохо читают данный сайт, но и другие (такие как вконтакте, одноклассники, ютуб).</p>
+    </div>
+<![endif]--> <!-- Warning for Internet Explorer -->
     
-    <header>
-        
-    </header>
+<div id="my-page">
+    <div id="my-header">
+        <header class="site-header">
+            <div class="wrapper">
+            	<p>Investor<strong>agency</strong></p>
+            	<div class="header-btns">
+            		<a href="#">Clients</a><a href="#">Agents</a>
+            	</div>
+                <a href="#my-menu" class="hamburger hamburger--spin">
+                    <span class="hamburger-name">Menu</span>
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </a>
+                <nav id="my-menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Our work</a></li>
+                        <li><a href="#">Our services</a></li>
+                        <li><a href="#">Funding programs</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Agent login</a></li>
+                        <li><a href="#">Create account</a></li>
+                    </ul>
+                </nav>
+                <p>Grow your funding</p>
+                <h1 class="h1">We're a full-service agency</h1>
+                <p>For business and investor brokers</p>
+                <p>We help our agents and member offices grow their funding originations through professional services</p>
+            </div>
+            <div class="bottom-line clearfix">
+            	<div class="wrapper">
+            		<div class="header-services">
+            			<i class="fa fa-recycle"></i>
+            			<p>Enterprise level technology</p>
+            		</div>
+            		<div class="header-services">
+            			<i class="fa fa-pencil-square-o"></i>
+            			<p>Best-in-class<br>training</p>
+            		</div>
+            		<div class="header-services">
+            			<i class="fa fa-users"></i>
+            			<p>Dedicated support<br>from industry experts</p>
+            		</div>
+            		<div class="header-services">
+            			<i class="fa fa-television"></i>
+            			<p>Network of exclusive funding products</p>
+            		</div>
+            	</div>
+            </div>
+        </header>
+    </div>
+</div>
+
+<div id="my-content">
     
-<!-- jquery -->
+</div>
+
+<div id="my-footer">
+    
+</div>
+    
+<!-- JQuery -->
     <script src="libs/jquery-3.2.1.min.js"></script>
-<!-- common js -->
+<!-- My-Menu -->
+    <script src="libs/mmenu/jquery.mmenu.all.js"></script>
+<!-- Common JS -->
     <script src="js/common.js"></script>
 </body>
 </html>
