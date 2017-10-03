@@ -1,11 +1,14 @@
 /* ==================================================
 Desktop First
 ================================================== */
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1366px) {
     
 }
+@media screen and (max-width:1200px) {
+    /* s-section */
+}
 @media screen and (max-width:992px) {
-    
+
 }
 @media screen and (max-width:768px) {
     

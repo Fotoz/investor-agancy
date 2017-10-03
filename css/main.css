@@ -55,6 +55,7 @@ p {
 .h5,
 .h6 {
     text-transform: uppercase;
+    text-align: center;
     line-height: 1.4;
     margin: 0;
 }
@@ -72,7 +73,7 @@ p {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
-    /*outline: 2px solid #09c;*/
+    /*outline: 1px solid #09c;*/
 }
 
 /* ==================================================
@@ -94,7 +95,7 @@ Section - Header
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, #7924b6, #1d6fa2);
-    opacity: .8;
+    opacity: .7;
     z-index: -1;
 }
 .site-header p:first-child {
@@ -139,7 +140,6 @@ Section - Header
 .h1 {
     font: 100 3.125em 'Montserrat', sans-serif;
     text-transform: initial;
-    text-align: center;
     letter-spacing: 2px;
     background: #139ec8;
     margin: 22px 15% 27px;
@@ -152,8 +152,7 @@ Section - Header
     padding: 80px 20% 19%;
 }
 .bottom-line {
-    background: linear-gradient(90deg, rgba(121, 36, 182, .7), rgba(29, 111, 162, .7));
-
+    background: linear-gradient(90deg, rgba(121,36,182,.7), rgba(29,111,162,.7));
 }
 .header-services {
     width: 25%;
@@ -263,10 +262,140 @@ html.mm-opened {
 }
 
 /* ==================================================
-Section - 
+Section - Recent Work
 ================================================== */
 
-
+.s-recent-work {
+    background: #f2f5f8;
+    padding: 162px 0 100px;
+}
+.h2 {
+    font: 500 .875em 'Montserrat', sans-serif;
+    color: rgba(1,1,1,.65);
+    letter-spacing: 8px;
+}
+.h2 + p {
+    font: 300 1.5em 'Montserrat', sans-serif;
+    color: rgba(0,0,0,.65);
+    text-align: center;
+    padding: 35px 15% 50px;
+}
+.side-1,
+.side-2 {
+    width: 50%;
+    float: left;
+    padding: 100px 0;
+}
+.side-1 {
+    background: url(../images/cloud-1.png) no-repeat left/contain;
+    padding-right: 50px;
+}
+.side-2 {
+    background: url(../images/cloud-2.png) no-repeat right/contain;
+    padding-left: 50px;
+}
+.coaching {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(1,1,1,.1);
+    max-width: 465px;
+    padding: 70px 70px 30px;
+}
+.side-1 .coaching {
+    float: right;
+}
+.side-2 .coaching {
+    float: left;
+}
+.coaching > p:first-child,
+.coaching > a:last-child {
+    font: 500 .75em 'Montserrat', sans-serif;
+    color: rgba(1,1,1,.4);
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+.h3 {
+    font: 500 1.125em 'Montserrat', sans-serif;
+    line-height: 1.4;
+    text-transform: initial;
+    text-align: initial;
+    padding: 17px 0 25px;
+}
+.h3 ~ p {
+    font-size: .938em;
+    color: rgba(1,1,1,.65);
+    line-height: 1.6;
+    padding-bottom: 25px;
+}
+.button {
+    font: 600 .75em 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: table;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    padding: 15px 35px;
+    background: linear-gradient(45deg, #356de3, #7b44d7);
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+.button .fa {
+    margin-right: 5px;
+}
+@keyframes swing {
+    15% {
+        transform: translateX(9px);
+    }
+    30% {
+        transform: translateX(-9px);
+    }
+    40% {
+        transform: translateX(6px);
+    }
+    50% {
+        transform: translateX(-6px);
+    }
+    65% {
+        transform: translateX(3px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.swing:hover {
+    animation: swing 1s;
+}
+.social {
+    margin-bottom: 14px;
+}
+.social p {
+    font-size: .75em;
+    color: rgba(1,1,1,.65);
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+.social a {
+    color: #fff;
+    background: #bababa;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    transition: background .7s;
+}
+.social a:hover {
+    background: #000;
+}
+.coaching > a:last-child {
+    transition: color .5s;
+}
+.coaching > a:last-child:hover {
+    color: #000;
+}
 
 /* ==================================================
 Section - 
