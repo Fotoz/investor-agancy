@@ -267,7 +267,7 @@ Section - Recent Work
 
 .s-recent-work {
     background: #f2f5f8;
-    padding: 162px 0 100px;
+    padding: 162px 0 130px;
 }
 .h2 {
     font: 500 .875em 'Montserrat', sans-serif;
@@ -275,7 +275,7 @@ Section - Recent Work
     letter-spacing: 8px;
 }
 .h2 + p {
-    font: 300 1.5em 'Montserrat', sans-serif;
+    font: 300 1.4em 'Montserrat', sans-serif;
     color: rgba(0,0,0,.65);
     text-align: center;
     padding: 35px 15% 50px;
@@ -398,22 +398,182 @@ Section - Recent Work
 }
 
 /* ==================================================
-Section - 
+Section - Our Work
 ================================================== */
 
-
+.s-our-work {
+    background: linear-gradient(#e7ecf0, #f2f5f8);
+    padding: 100px 0 120px;
+    position: relative;
+}
+.work-heading {
+    font: 500 .875em 'Montserrat', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    background: #139ec8;
+    border-radius: 15px;
+    padding: 20px 53px;
+    position: absolute;
+    top: -29px;
+    left: calc(50% - 150px);
+}
+.work-item {
+    width: 20%;
+    float: left;
+    /*outline: 1px solid red;*/
+}
+.work-item a {
+    display: table;
+    margin: 0 auto;
+    opacity: .3;
+    transition: opacity .5s;
+}
+.work-item:nth-of-type(3) {
+    padding-top: 10px;
+}
+.work-item a:hover {
+    opacity: 1;
+}
 
 /* ==================================================
-Section - 
+Section - Our Services
 ================================================== */
 
-
-
+.s-our-services {
+    background: url(../images/services-bg.png) no-repeat center/cover, #f2f5f8;
+    padding-bottom: 185px;
+}
+.our-services-items {
+    max-width: 450px;
+    margin: 65px auto 0;
+    background: #e0e5e7;
+    box-shadow: 0 5px 20px rgba(1,1,1,.3);
+    /*outline: 1px solid red;*/
+}
+.our-services-items a {
+    font: 500 .688em 'Montserrat', sans-serif;
+    color: rgba(1,1,1,.65);
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.7;
+}
+.services-item {
+    background: linear-gradient(#e0e5e7, #cbd2d9);
+    width: 50%;
+    padding: 30px 20px;
+    float: left;
+    position: relative;
+    transition: all .5s;
+}
+.services-item .fa {
+    font-size: 50px;
+    color: #7665ea;
+    margin-bottom: 25px;
+    transition: color .5s;
+}
+.services-item:hover {
+    background: #4a75b4;
+    color: rgba(255,255,255,.8);
+}
+.services-item:hover .fa {
+    color: #fff;
+}
+.h-border::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -50%;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #b1bac1, transparent);
+}
+.v-border::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(#b1bac1, transparent, #b1bac1);
+}
+.f-border::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    height: 50%;
+    background: linear-gradient(transparent, #b1bac1);
+}
+.l-border::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 50%;
+    background: linear-gradient(#b1bac1, transparent);
+}
 /* ==================================================
-Section - 
+Section - Counts
 ================================================== */
 
-
+.s-counts {
+    background: #f2f5f8;
+    padding-bottom: 100px;
+}
+.counts-item-1 {
+    font: 700 9.375em 'Montserrat', sans-serif;
+    color: #4e86dd;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(1,1,1,.3);
+    padding: 60px 0;
+    margin-top: 50px;
+    width: 40%;
+    float: left;
+    position: relative;
+}
+.counts-item-1 p:first-letter {
+    color: #7f5eee;
+}
+.counts-item-1::after {
+    content: '\f201';
+    position: absolute;
+    top: -40px;
+    right: -45px;
+    font-family: fontawesome;
+    font-size: 40px;
+    color: #d2d6da;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(1,1,1,.2);
+    padding: 20px;
+}
+.counts-item-2 {
+    padding: 32px 70px 32px 100px;
+    margin-top: 50px;
+    width: 60%;
+    float: left;
+}
+.counts-item-2 p:first-child {
+    font: 300 1.375em 'Montserrat', sans-serif;
+    color: rgba(1,1,1,.8);
+    line-height: 1.4;
+}
+.counts-item-2 span {
+    font-weight: 600;
+    color: #1fa6cf;
+}
+.counts-item-2 hr {
+    border: 2px solid #e8e8e8;
+    width: 60%;
+    margin: 30px 40% 30px 0;
+}
+.counts-item-2 p:last-child {
+    color: rgba(1,1,1,.45);
+}
 
 /* ==================================================
 Section - 
