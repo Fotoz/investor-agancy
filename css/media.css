@@ -1,11 +1,11 @@
 /* ==================================================
-Desktop First
+Responsive Media Queries
 ================================================== */
 @media screen and (max-width:1366px) {
-    
+    /***** Hamburger *****/
 }
 @media screen and (max-width:1200px) {
-    /* s-section */
+    /***** Hamburger *****/
 }
 @media screen and (max-width:992px) {
 

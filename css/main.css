@@ -1,35 +1,41 @@
 /* ==================================================
-Fonts
+Google Fonts
 ================================================== */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,300i,400,500,600,700');
 
 /* ==================================================
 Basic Settings
 ================================================== */
 
 *::-webkit-input-placeholder {
-    color: #666;
+    text-transform: capitalize;
+    color: rgba(255,255,255,.5);
     opacity: 1;
 }
 *:-moz-placeholder {
-    color: #666;
+    text-transform: capitalize;
+    color: rgba(255,255,255,.5);
     opacity: 1;
 }
 *::-moz-placeholder {
-    color: #666;
+    text-transform: capitalize;
+    color: rgba(255,255,255,.5);
     opacity: 1;
 }
 *:-ms-input-placeholder {
-    color: #666;
+    text-transform: capitalize;
+    color: rgba(255,255,255,.5);
     opacity: 1;
+}
+:focus {
+    outline: none; /* убираем фокус для плавной прокрутки */
 }
 * {
     box-sizing: border-box;
 }
 body {
     font: 16px 'Montserrat', sans-serif;
-    /*background: #7924b6;*/
     min-width: 320px;
     line-height: 1.75;
     overflow-x: hidden;
@@ -59,11 +65,6 @@ p {
     line-height: 1.4;
     margin: 0;
 }
-.img-responsive {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
 .clearfix::after {
     content: '';
     display: table;
@@ -85,7 +86,7 @@ Section - Header
     color: #fff;
     padding-top: 252px;
     position: relative;
-    z-index: 1;
+    z-index: 10;
 }
 .site-header::before {
     content: '';
@@ -94,14 +95,12 @@ Section - Header
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, #7924b6, #1d6fa2);
-    opacity: .7;
-    z-index: -1;
+    background: linear-gradient( 140deg, rgba(137,37,207,.85), rgba(16,130,165,.85));
+    z-index: -10;
 }
 .site-header p:first-child {
     font: 300 1.25em 'Montserrat', sans-serif;
     text-transform: uppercase;
-    letter-spacing: .5px;
     position: absolute;
     top: 55px;
     left: 25px;
@@ -109,7 +108,8 @@ Section - Header
 .header-btns {
     position: absolute;
     top: 52px;
-    left: calc(50% - 113px);
+    left: 50%;
+    transform: translateX(-50%);
 }
 .header-btns a {
     font-size: .75em;
@@ -142,17 +142,21 @@ Section - Header
     text-transform: initial;
     letter-spacing: 2px;
     background: #139ec8;
-    margin: 22px 15% 27px;
+    max-width: 800px;
+    margin: 22px auto 27px;
     padding: 22px 0;
+    /*margin: 22px 15% 27px; old meanings*/
 }
 .site-header p:nth-of-type(4) {
-    font: 300 1.375em 'Montserrat', sans-serif;
+    font: 300 1.3em 'Montserrat', sans-serif;
     text-align: center;
     line-height: 1.5;
-    padding: 80px 20% 19%;
+    max-width: 650px;
+    margin: 80px auto 20%;
+    /*padding: 80px 20% 19%; old meanings*/
 }
 .bottom-line {
-    background: linear-gradient(90deg, rgba(121,36,182,.7), rgba(29,111,162,.7));
+    background: rgba(255,255,255,.1);
 }
 .header-services {
     width: 25%;
@@ -161,14 +165,14 @@ Section - Header
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center;
-    padding: 50px 15px;
+    padding: 50px 15px 46px;
     position: relative;
 }
-.bottom-line .fa {
+.bottom-line .fas {
     font-size: 60px;
     margin-bottom: 35px;
 }
-.header-services::after {
+.header-services:not(:last-child)::after {
     content: '';
     position: absolute;
     right: 0;
@@ -177,10 +181,11 @@ Section - Header
     height: 80%;
     background: linear-gradient(transparent, #9c9c9c, transparent);
 }
-.header-services:last-child::after {
-    background: transparent;
+.site-header ul {
+    opacity: 0; /* скрываем список, так как при обновлении страницы он стает видимым на короткий промежуток времени*/
 }
-/* Hamburger */
+
+/***** Hamburger *****/
 .hamburger {
     position: absolute;
     top: 55px;
@@ -205,12 +210,14 @@ Section - Header
 }
 .hamburger-name {
     font-size: .875em;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
     position: absolute;
     right: 50px;
 }
-/* My-Menu */
+
+/***** My-Menu *****/
 html.mm-opened {
     overflow-y: scroll;
 }
@@ -225,7 +232,6 @@ html.mm-opened {
 .mm-navbar .mm-title {
     font: 300 1.25em 'Montserrat', sans-serif;
     text-transform: uppercase;
-    letter-spacing: .5px;
 }
 .mm-panels>.mm-panel {
     padding: 0;
@@ -256,9 +262,8 @@ html.mm-opened {
 }
 .mm-listview > li > a::before {
     content: '\f2dd';
-    font-family: fontawesome;
+    font-family: 'Font Awesome 5 Brands';
     margin-right: 11px;
-    font-size: .875em;
 }
 
 /* ==================================================
@@ -267,10 +272,10 @@ Section - Recent Work
 
 .s-recent-work {
     background: #f2f5f8;
-    padding: 162px 0 130px;
+    padding: 160px 0 125px;
 }
 .h2 {
-    font: 500 .875em 'Montserrat', sans-serif;
+    font: 600 .875em 'Montserrat', sans-serif;
     color: rgba(1,1,1,.65);
     letter-spacing: 8px;
 }
@@ -278,21 +283,44 @@ Section - Recent Work
     font: 300 1.4em 'Montserrat', sans-serif;
     color: rgba(0,0,0,.65);
     text-align: center;
-    padding: 35px 15% 50px;
+    max-width: 810px;
+    margin: 35px auto 55px;
+    /*padding: 35px 15% 55px; old meanings*/
 }
 .side-1,
 .side-2 {
     width: 50%;
     float: left;
     padding: 100px 0;
+    position: relative;
 }
 .side-1 {
-    background: url(../images/cloud-1.png) no-repeat left/contain;
-    padding-right: 50px;
+    padding-right: 35px;
 }
 .side-2 {
-    background: url(../images/cloud-2.png) no-repeat right/contain;
-    padding-left: 50px;
+    padding-left: 35px;
+}
+.side-1:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 267px;
+    bottom: 0;
+    left: 0;
+    background: url(../images/recent-work-left-bg.jpg) no-repeat left -90px center/cover;
+    border-radius: 0 15px 15px 0;
+    z-index: 10;
+}
+.side-2:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 267px;
+    background: url(../images/recent-work-right-bg.jpg) no-repeat right -150px center/cover;
+    border-radius: 15px 0 0 15px;
+    z-index: 10;
 }
 .coaching {
     background: #fff;
@@ -300,6 +328,8 @@ Section - Recent Work
     box-shadow: 0 5px 20px rgba(1,1,1,.1);
     max-width: 465px;
     padding: 70px 70px 30px;
+    position: relative;
+    z-index: 50;
 }
 .side-1 .coaching {
     float: right;
@@ -309,13 +339,13 @@ Section - Recent Work
 }
 .coaching > p:first-child,
 .coaching > a:last-child {
-    font: 500 .75em 'Montserrat', sans-serif;
+    font: 600 .75em 'Montserrat', sans-serif;
     color: rgba(1,1,1,.4);
     letter-spacing: 2.5px;
     text-transform: uppercase;
 }
 .h3 {
-    font: 500 1.125em 'Montserrat', sans-serif;
+    font: 600 1.125em 'Montserrat', sans-serif;
     line-height: 1.4;
     text-transform: initial;
     text-align: initial;
@@ -323,6 +353,7 @@ Section - Recent Work
 }
 .h3 ~ p {
     font-size: .938em;
+    font-weight: 500;
     color: rgba(1,1,1,.65);
     line-height: 1.6;
     padding-bottom: 25px;
@@ -332,8 +363,7 @@ Section - Recent Work
     text-transform: uppercase;
     letter-spacing: 1px;
     display: table;
-    margin-top: 15px;
-    margin-bottom: 25px;
+    margin: 15px 0 25px 0;
     padding: 15px 35px;
     background: linear-gradient(45deg, #356de3, #7b44d7);
     border-radius: 20px;
@@ -341,10 +371,10 @@ Section - Recent Work
     border: none;
     outline: none;
 }
-.button .fa {
+.button .fas {
     margin-right: 5px;
 }
-@keyframes swing {
+@keyframes shake {
     15% {
         transform: translateX(9px);
     }
@@ -364,15 +394,16 @@ Section - Recent Work
         transform: translateX(0);
     }
 }
-.swing:hover {
-    animation: swing 1s;
+.animated-btn:hover {
+    animation: shake 1s;
 }
 .social {
     margin-bottom: 14px;
 }
 .social p {
     font-size: .75em;
-    color: rgba(1,1,1,.65);
+    font-weight: 600;
+    color: rgba(1,1,1,.4);
     text-transform: uppercase;
     padding-bottom: 15px;
 }
@@ -385,16 +416,17 @@ Section - Recent Work
     text-align: center;
     line-height: 35px;
     border-radius: 50%;
+    margin-right: 2px;
     transition: background .7s;
 }
 .social a:hover {
-    background: #000;
+    background: #404040;
 }
 .coaching > a:last-child {
-    transition: color .5s;
+    transition: color .25s;
 }
 .coaching > a:last-child:hover {
-    color: #000;
+    color: #404040;
 }
 
 /* ==================================================
@@ -402,37 +434,44 @@ Section - Our Work
 ================================================== */
 
 .s-our-work {
-    background: linear-gradient(#e7ecf0, #f2f5f8);
-    padding: 100px 0 120px;
+    background: linear-gradient(#e7ecf0, #f2f5f8 50%);
+    padding: 90px 0;
     position: relative;
+    /*outline: 1px solid red;*/
 }
-.work-heading {
-    font: 500 .875em 'Montserrat', sans-serif;
+.our-work-heading {
+    font: 600 .875em 'Montserrat', sans-serif;
     color: #fff;
     text-transform: uppercase;
     background: #139ec8;
     border-radius: 15px;
-    padding: 20px 53px;
+    padding: 20px 52px;
     position: absolute;
-    top: -29px;
-    left: calc(50% - 150px);
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.work-item {
+.our-work-item {
     width: 20%;
     float: left;
     /*outline: 1px solid red;*/
 }
-.work-item a {
+.our-work-item:nth-child(3) {
+    padding-top: 10px;
+}
+.our-work-item a {
     display: table;
     margin: 0 auto;
     opacity: .3;
-    transition: opacity .5s;
+    transition: opacity .4s;
 }
-.work-item:nth-of-type(3) {
-    padding-top: 10px;
-}
-.work-item a:hover {
+.our-work-item a:hover {
     opacity: 1;
+}
+.our-work-item a img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* ==================================================
@@ -441,42 +480,51 @@ Section - Our Services
 
 .s-our-services {
     background: url(../images/services-bg.png) no-repeat center/cover, #f2f5f8;
-    padding-bottom: 185px;
+    padding: 50px 0 100px;
 }
 .our-services-items {
     max-width: 450px;
-    margin: 65px auto 0;
-    background: #e0e5e7;
-    box-shadow: 0 5px 20px rgba(1,1,1,.3);
+    margin: 115px auto 0;
+    background: #e1e5e8;
+    box-shadow: 0 0 40px rgba(1,1,1,.2);
     /*outline: 1px solid red;*/
 }
 .our-services-items a {
-    font: 500 .688em 'Montserrat', sans-serif;
+    font: 600 .688em 'Montserrat', sans-serif;
     color: rgba(1,1,1,.65);
     text-transform: uppercase;
     text-align: center;
     line-height: 1.7;
 }
 .services-item {
-    background: linear-gradient(#e0e5e7, #cbd2d9);
+    background: linear-gradient(#e1e5e8, #cbd2d9);
     width: 50%;
-    padding: 30px 20px;
+    padding: 28px 15px;
     float: left;
     position: relative;
     transition: all .5s;
 }
-.services-item .fa {
+.services-item .far {
     font-size: 50px;
     color: #7665ea;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     transition: color .5s;
 }
 .services-item:hover {
     background: #4a75b4;
     color: rgba(255,255,255,.8);
 }
-.services-item:hover .fa {
-    color: #fff;
+.services-item:hover .far {
+    color: rgba(255,255,255,.8);
+}
+.f-border::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    height: 50%;
+    background: linear-gradient(transparent, #b1bac1);
 }
 .h-border::after {
     content: '';
@@ -496,15 +544,6 @@ Section - Our Services
     height: 100%;
     background: linear-gradient(#b1bac1, transparent, #b1bac1);
 }
-.f-border::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 1px;
-    height: 50%;
-    background: linear-gradient(transparent, #b1bac1);
-}
 .l-border::after {
     content: '';
     position: absolute;
@@ -514,46 +553,56 @@ Section - Our Services
     height: 50%;
     background: linear-gradient(#b1bac1, transparent);
 }
+
 /* ==================================================
 Section - Counts
 ================================================== */
 
 .s-counts {
     background: #f2f5f8;
-    padding-bottom: 100px;
+    padding: 60px 0 335px;
+    position: relative;
 }
 .counts-item-1 {
-    font: 700 9.375em 'Montserrat', sans-serif;
-    color: #4e86dd;
-    text-align: center;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(1,1,1,.3);
-    padding: 60px 0;
-    margin-top: 50px;
+    box-shadow: 0 0 40px rgba(1,1,1,.1);
+    padding: 65px 0;
+    margin-top: 40px;
     width: 40%;
     float: left;
     position: relative;
 }
-.counts-item-1 p:first-letter {
+/***** Градиент для текста, поддерживается только в браузерах на основе WebKit-движка *****/
+.gradient-text {
+    font: 700 9.375em 'Montserrat', sans-serif;
+    text-align: center;
+    background: linear-gradient(90deg, #7a62ec, #4d86dc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #4e86dd;
+}
+.counts-item-1 p::first-letter {
     color: #7f5eee;
 }
 .counts-item-1::after {
     content: '\f201';
-    position: absolute;
-    top: -40px;
-    right: -45px;
-    font-family: fontawesome;
-    font-size: 40px;
+    font-family: 'Font Awesome 5 Free';
+    font-size: 50px;
+    font-weight: 900;
     color: #d2d6da;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(1,1,1,.2);
-    padding: 20px;
+    box-shadow: 0 3px 10px rgba(1,1,1,.2);
+    padding: 0 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
 }
 .counts-item-2 {
-    padding: 32px 70px 32px 100px;
-    margin-top: 50px;
+    padding: 50px 25px 35px 95px;
+    margin-top: 40px;
     width: 60%;
     float: left;
 }
@@ -561,6 +610,7 @@ Section - Counts
     font: 300 1.375em 'Montserrat', sans-serif;
     color: rgba(1,1,1,.8);
     line-height: 1.4;
+    max-width: 500px;
 }
 .counts-item-2 span {
     font-weight: 600;
@@ -568,21 +618,263 @@ Section - Counts
 }
 .counts-item-2 hr {
     border: 2px solid #e8e8e8;
-    width: 60%;
-    margin: 30px 40% 30px 0;
+    max-width: 300px;
+    margin: 25px 0;
 }
 .counts-item-2 p:last-child {
-    color: rgba(1,1,1,.45);
+    color: rgba(1,1,1,.65);
+    max-width: 500px;
+}
+/***** Скошенный угол сделанный с помощью свойства clip-path *****/
+.s-counts::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(90deg, #7244c6, #3076af);
+    -webkit-clip-path: polygon(100% 20%, 100% 0%, 101% 100%, 0% 100%);
+    clip-path: polygon(100% 20%, 100% 0%, 100% 101%, 0% 100%);
 }
 
 /* ==================================================
-Section - 
+Section - Contact Us
 ================================================== */
 
+.s-contact-us {
+    background: linear-gradient(90deg, #7244c6, #3076af);
+    padding-bottom: 125px;
+    position: relative;
+}
+.s-contact-us::before {
+    content: '';
+    position: absolute;
+    top: -180px;
+    left: calc(50% - 674px);
+    bottom: 75px;
+    right: 53%;
+    background: url(../images/illustration.png) no-repeat center/contain;
+}
+.contact-form {
+    width: 46%;
+    margin-left: 54%;
+    /*outline: 1px solid red;*/
+}
+.contact-form .h2 {
+    color: rgba(255,255,255,.65);
+}
 
+/***** Selectize *****/
+select,
+input,
+.selectize-control .selectize-input {
+    border: 1px solid rgba(255,255,255,.35);
+    border-radius: 10px;
+    padding: 15px 25px;
+    outline: none;
+}
+select,
+.selectize-control .selectize-input,
+.selectize-control .selectize-input input,
+.selectize-control.single .selectize-input.input-active {
+    font: 500 1em 'Montserrat', sans-serif;
+    color: rgba(255,255,255,.85);
+    background: linear-gradient(90deg, #656dc2, #4b7fb9);
+    width: 100%;
+    margin-top: 40px;
+    box-shadow: none;
+}
+.selectize-control.single {
+    line-height: .7;
+}
+.selectize-input.dropdown-active::before {
+    content: '';
+    background: none;
+}
+.selectize-control.single .selectize-input::after {
+    border: none;
+    content: '\f107';
+    font: 900 1.3em 'Font Awesome 5 Free';
+    position: absolute;
+    top: 17px;
+    right: 40px;
+}
+.selectize-control.single .selectize-input.dropdown-active::after {
+    content: '\f106';
+}
+.selectize-dropdown {
+    font: 500 .9em 'Montserrat', sans-serif;
+    color: rgba(0,0,0,.85);
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.selectize-dropdown-content .option {
+    padding: 15px 25px;
+    transition: all .25s;
+}
+.selectize-dropdown-content .option.active {
+    background: #139ec8;
+    color: #fff;
+}
+input {
+    font: italic 300 1em 'Montserrat', sans-serif;
+    color: rgba(255,255,255,.85);
+    background: none;
+    float: left;
+    width: 48%;
+    margin-top: 20px;
+    transition: border-color .35s;
+}
+input:nth-of-type(1),
+input:nth-of-type(3) {
+    margin-right: 4%;
+}
+input:nth-of-type(5) {
+    width: 100%;
+}
+input:focus {
+    border-color: rgba(255,255,255,.85);
+}
+button {
+    font: 1em 'Montserrat', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    padding: 15px 60px 15px 25px;
+    background: #139ec8;
+    border-radius: 10px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: all .5s;
+}
+button::after {
+    content: '\f105';
+    font: 900 1.3em 'Font Awesome 5 Free';
+    position: absolute;
+    top: 29%;
+    right: 25px;
+}
+button:hover {
+    background: #1183a5;
+}
+button:hover::after {
+    animation: rotate .5s linear;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
 
 /* ==================================================
-Section - 
+Section - Footer
 ================================================== */
 
-
+.site-footer {
+    background: #f2f5f8;
+}
+[class|="i-footer"] {
+    float: left;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    /*outline: 1px solid darkcyan;*/
+}
+.i-footer-left {
+    width: 67%;
+}
+.i-footer-right {
+    width: 33%;
+    padding-left: 80px;
+    background: linear-gradient(90deg, #e3e8ed, #f2f5f8);
+}
+.site-footer .social {
+    float: left;
+    margin-bottom: 0;
+}
+.site-footer .social p {
+    font: 300 1.25em 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: #139ec8;
+    padding-bottom: 27px;
+}
+.site-footer .social a {
+    background: #404040;
+}
+.site-footer .social a:hover{
+    background: #777;
+}
+.footer-nav {
+    column-count: 2;
+    column-gap: 85px;
+    float: left;
+    margin-left: 125px;
+}
+.footer-nav ul {
+    padding: 0;
+    margin: 0;
+}
+.footer-nav li {
+    line-height: initial;
+    margin-bottom: 10px;
+}
+.footer-nav a {
+    font-size: .9em;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: rgba(1,1,1,.65);
+    transition: all .25s;
+}
+.footer-nav a:hover {
+    color: #404040;
+    border-bottom: 1px solid #404040;
+}
+.i-footer-right a {
+    white-space: nowrap;
+    position: relative;
+}
+.i-footer-right a::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+.i-footer-right a:first-child {
+    font: 700 1.375em 'Montserrat', sans-serif;
+    color: #139ec8;
+}
+.i-footer-right a:nth-of-type(2) {
+    font: 300 1.2em 'Montserrat', sans-serif;
+    color: #404040;
+    display: table;
+    margin: 15px 0;
+}
+.i-footer-right a:first-child::before {
+    content: '\f2a0';
+    top: 0;
+    left: -25px;
+}
+.i-footer-right a:nth-of-type(2)::before {
+    content: '\f1fa';
+    top: 4px;
+    left: -27px;
+}
+.i-footer-right a:hover:first-child::before,
+.i-footer-right a:hover:nth-of-type(2)::before {
+    transition: all .5s;
+    opacity: 1;
+    visibility: visible;
+}
+.i-footer-right small {
+    display: block;
+    color: rgba(1,1,1,.65);
+    font: .83em 'Montserrat', sans-serif;
+}
