@@ -31,6 +31,10 @@ Basic Settings
 :focus {
     outline: none; /* убираем фокус для плавной прокрутки */
 }
+#__lpform_input_idx_0,
+#__lpform_input_idx_0_icon {
+    display: none; /* скрываю появление непонятной иконку в селекте */
+}
 * {
     box-sizing: border-box;
 }
