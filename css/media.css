@@ -1,21 +1,470 @@
 /* ==================================================
 Responsive Media Queries
 ================================================== */
-@media screen and (max-width:1366px) {
-    /***** Hamburger *****/
+
+@media screen and (max-width:1330px) {
+
+/***** SECTION: Recent Work *****/
+	.side-1 {
+	    padding: 50px 35px 50px 0;
+	}
+	.side-2 {
+	    padding: 50px 0 50px 35px;
+	}
+	.side-1::before,
+	.side-2::after {
+		display: none;
+	}
+
 }
 @media screen and (max-width:1200px) {
-    /***** Hamburger *****/
+
+/***** SECTION: Recent Work *****/
+	.side-1 {
+	    padding: 50px 25px 50px 40px;
+	}
+	.side-2 {
+	    padding: 50px 40px 50px 25px;
+	}
+	.coaching {
+		padding: 50px 50px 30px;
+	}
+
+/***** SECTION: Contact Us *****/
+	.s-contact-us::before {
+	    top: -150px;
+	}
+	.contact-form {
+		width: 48%;
+		margin-left: 52%;
+	}
+
+/***** SECTION: Footer *****/
+	.i-footer-left {
+		padding-left: 15px;
+	}
+	.i-footer-right {
+		padding-left: 50px;
+	}
+	.footer-nav {
+		column-gap: 50px;
+		margin-left: 105px;
+	}
+
 }
 @media screen and (max-width:992px) {
 
+/***** SECTION: Header *****/
+	.header-services {
+		font-size: .7em;
+		letter-spacing: 1px;
+		padding: 30px 10px;
+	}
+	.bottom-line .fas {
+		font-size: 50px;
+		margin-bottom: 30px;
+	}
+
+/***** SECTION: Recent Work *****/
+	.s-recent-work {
+		padding: 120px 0;
+	}
+	.h2 + p {
+		font-size: 1.3em;
+	}
+	.side-1,
+	.side-2 {
+	    width: 100%;
+	    float: none;
+	    padding: 20px 0 30px;
+	}
+	.side-2 {
+		padding-bottom: 0;
+	}
+	.side-1 .coaching,
+	.side-2 .coaching {
+		float: none;
+		margin: 0 auto;
+	}
+
+/***** SECTION: Our Work *****/
+	.s-our-work {
+		padding: 80px 0 70px;
+	}
+
+/***** SECTION: Our Services *****/
+	.s-our-services {
+		padding-bottom: 60px;
+	}
+	.our-services-items {
+		margin-top: 100px;
+	}
+
+/***** SECTION: Counts *****/
+	.s-counts {
+		padding-bottom: 150px;
+	}
+	.counts-item-1 {
+		margin-top: 70px;
+	}
+	.counts-item-2 {
+		padding: 50px 0 35px 60px;
+	}
+	.gradient-text {
+		font-size: 8em;
+	}
+	.s-counts::after {
+		height: 150px;
+	}
+
+/***** SECTION: Contact Us *****/
+	.s-contact-us {
+		padding: 40px 0 90px;
+	}
+	.s-contact-us::before {
+		display: none;
+	}
+	.contact-form {
+		max-width: 500px;
+		width: 100%;
+		margin: 0 auto;
+	}
+	.contact-form input:last-of-type {
+		margin-bottom: 20px;
+	}
+	button {
+		margin: 0 auto;
+		display: table;
+	}
+
+/***** SECTION: Footer *****/
+	[class|="i-footer"] {
+	    padding-top: 60px;
+	    padding-bottom: 20px;
+	}
+	.i-footer-left {
+		padding-left: 0;
+	}
+	.i-footer-right {
+		padding-left: 35px;
+	}
+	.footer-nav {
+		column-gap: 15px;
+		margin-left: 40px;
+	}
+	.footer-nav a {
+		font-size: .85em;
+	}
+	.i-footer-right a:nth-of-type(2) {
+		font-size: 1em;
+	}
+
 }
 @media screen and (max-width:768px) {
-    
+
+/***** SECTION: Header *****/
+	.site-header {
+		padding-top: 225px;
+	}
+	.site-header p:first-child,
+	.hamburger {
+		top: 40px;
+	}
+	.mm-panels>.mm-panel.mm-hasnavbar {
+		padding-top: 25px;
+	}
+	.header-btns {
+		display: none;
+	}
+	.h1 {
+		font-size: 1.9em;
+		max-width: 500px;
+	}
+	.site-header p:nth-of-type(4) {
+		font-size: 1.2em;
+		max-width: 500px;
+	}
+	.header-services {
+		font-size: .65em;
+		letter-spacing: initial;
+		padding: 20px 10px;
+		height: 172px;
+	}
+	.bottom-line .fas {
+		font-size: 40px;
+		margin-bottom: 20px;
+	}
+
+/***** SECTION: Recent Work *****/
+	.s-recent-work {
+		padding-top: 100px;
+	}
+	.h2 {
+		font-size: .85em;
+	}
+	.h2 + p {
+		font-size: 1.2em;
+	}
+	.side-1,
+	.side-2 {
+		padding: 20px 15px 30px;
+	}
+
+/***** SECTION: Our Work *****/
+	.s-our-work {
+		padding: 80px 0 20px;
+	}
+	.our-work-heading .h2 {
+		font-size: .85em;
+	}
+	.our-work-item {
+		width: 32%;
+		margin-bottom: 40px;
+	}
+	.our-work-item:nth-child(2) {
+		margin-left: 2%;
+	}
+	.our-work-item:nth-child(5) {
+		margin-left: 18%;
+	}
+
+/***** SECTION: Counts *****/
+	.s-counts {
+		padding-bottom: 100px;
+	}
+	.counts-item-1,
+	.counts-item-2 {
+		float: none;
+	}
+	.counts-item-1 {
+		width: 100%;
+		max-width: 350px;
+		padding: 50px 0;
+		margin: 70px auto 0;
+	}
+	.counts-item-1::after {
+		font-size: 45px;
+	}
+	.counts-item-2 {
+		width: 100%;
+		padding: 0;
+		margin: 55px auto 0;
+	}
+	.counts-item-2 p:first-child,
+	.counts-item-2 p:last-child {
+		max-width: 450px;
+		margin: 0 auto;
+	}
+	.counts-item-2 hr {
+		max-width: 450px;
+		margin: 25px auto;
+	}
+	.s-counts::after {
+		height: 100px;
+	}
+
+/***** SECTION: Footer *****/
+	.footer-nav {
+		display: none;
+	}
+	[class|="i-footer"] {
+		width: 50%;
+		padding-top: 50px;
+    	padding-bottom: 0;
+	}
+	.site-footer .social {
+		float: none;
+		text-align: right;
+	}
+	.i-footer-right a:first-child::before,
+	.i-footer-right a:nth-of-type(2)::before {
+		display: none;
+	}
+	.i-footer-left {
+		padding-right: 20px;
+	}
+	.i-footer-right {
+		padding-left: 20px;
+	}
+
 }
 @media screen and (max-width:480px) {
-    
+
+/***** SECTION: Header *****/
+	.site-header {
+		padding-top: 200px;
+	}
+	.hamburger-name {
+		display: none;
+	}
+	.site-header p:first-child {
+		left: 15px;
+	}
+	.mm-navbar {
+		padding: 5px 0;
+	}
+	.h1 {
+		padding: 10px 0;
+	}
+	.site-header p:nth-of-type(2),
+	.site-header p:nth-of-type(3) {
+		font-size: .8em;
+	}
+	.site-header p:nth-of-type(4) {
+		font-size: 1.1em;
+		margin-top: 55px;
+	}
+	.header-services {
+		width: 50%;
+		height: initial;
+	}
+	.header-services:nth-child(2)::after {
+		display: none;
+	}
+
+/***** SECTION: Recent Work *****/
+	.s-recent-work {
+		padding: 75px 0;
+	}
+	.h2 + p {
+	    font-size: 1.1em;
+	}
+	.side-2 {
+		padding-top: 10px;
+	}
+	.coaching {
+	    padding: 35px 30px 30px;
+	}
+	.h3 {
+		font-size: 1.03em;
+	}
+
+/***** SECTION: Our Work *****/
+	.s-our-work {
+		padding-bottom: 0;
+	}
+	.our-work-item {
+		width: 50%;
+		margin-bottom: 30px;
+	}
+	.our-work-item:nth-child(2) {
+		margin-left: 0%;
+	}
+	.our-work-item:nth-child(5) {
+		margin-left: 0%;
+	}
+	.our-work-item:nth-child(6) {
+		margin-left: 25%;
+	}
+
+/***** SECTION: Our Services *****/
+	.s-our-services {
+		padding: 40px 0;
+	}
+	.our-services-items {
+		margin-top: 80px;
+		box-shadow: 0 0 20px rgba(1,1,1,.2);
+		max-width: 250px;
+	}
+	.services-item {
+		float: none;
+		width: 100%;
+		padding: 28px 30px;
+	}
+	.s-our-services [class$="border"]::after {
+		display: none;
+	}
+
+/***** SECTION: Counts *****/
+	.s-counts {
+		padding-bottom: 80px;
+	}
+	.s-counts::after {
+	    height: 50px;
+	}
+	.counts-item-1 {
+		padding: 40px 0;
+	}
+	.gradient-text {
+	    font-size: 7em;
+	}
+	.counts-item-1::after {
+		font-size: 40px;
+		padding: 0 16px;
+		transform: translate(-30%, -50%);
+	}
+	.counts-item-2 p:first-child {
+		font-size: 1.3em;
+	}
+
+/***** SECTION: Contact Us *****/
+	.s-contact-us {
+		padding-bottom: 70px;
+	}
+	input {
+		width: 100%;
+		float: none;
+	}
+	input:nth-of-type(1),
+	input:nth-of-type(3) {
+	    margin-right: 0;
+	}
+	select,
+	.selectize-control .selectize-input,
+	.selectize-control .selectize-input input,
+	.selectize-control.single .selectize-input.input-active {
+		font-size: .88em;
+	}
+	.selectize-control.single .selectize-input::after {
+		right: 25px;
+	}
+
+/***** SECTION: Footer *****/
+	.site-footer {
+	    background: linear-gradient(90deg, #e3e8ed, #f2f5f8);
+	}
+	[class|="i-footer"] {
+		width: 100%;
+		float: none;
+		padding: 50px 0 0;
+		text-align: center;
+	}
+	.site-footer .social {
+		text-align: center;
+	}
+	.i-footer-right {
+		padding-top: 0;
+	}
+	.i-footer-right a:nth-of-type(2) {
+		margin: 15px auto;
+	}
+
 }
 @media screen and (max-width:320px) {
-    
+
+/***** SECTION: Recent Work *****/
+	.side-1 {
+		padding-top: 0;
+	}
+	.coaching {
+	    padding: 30px 19px 30px;
+	}
+
+/***** SECTION: Our Work *****/
+    .our-work-heading {
+    	padding: 20px 30px;
+    	left: calc(50% - 128px);
+    }
+    .our-work-item {
+    	width: 70%;
+    	float: none;
+    	margin-left: 15% !important;
+    	margin-bottom: 25px;
+    }
+
+/***** SECTION: Our Services *****/
+    .s-our-services {
+    	padding-bottom: 30px;
+    }
+
 }
