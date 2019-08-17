@@ -8,6 +8,9 @@ $(function() {
 		},
 		offCanvas: {
 			position: 'right'
+		},
+		onClick: {
+			close: true
 		}
 	});
 

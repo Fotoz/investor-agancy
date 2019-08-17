@@ -308,7 +308,6 @@ Section - Recent Work
     left: 0;
     background: url(../images/recent-work-left-bg.jpg) no-repeat left -90px center/cover;
     border-radius: 0 15px 15px 0;
-    z-index: 10;
 }
 .side-2::after {
     content: '';
@@ -319,7 +318,6 @@ Section - Recent Work
     left: 267px;
     background: url(../images/recent-work-right-bg.jpg) no-repeat right -150px center/cover;
     border-radius: 15px 0 0 15px;
-    z-index: 10;
 }
 .coaching {
     background: #fff;
@@ -328,7 +326,7 @@ Section - Recent Work
     max-width: 465px;
     padding: 70px 70px 30px;
     position: relative;
-    z-index: 50;
+    z-index: 5;
 }
 .side-1 .coaching {
     float: right;
